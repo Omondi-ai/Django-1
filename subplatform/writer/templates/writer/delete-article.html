@@ -1,0 +1,31 @@
+
+{% extends 'writer/navbar.html'%}
+
+
+{% block content %}
+    <br>
+
+    <div class="container bg-white shadow-md p-5 form-layout">
+
+        <h4> Delete an article</h4>
+        <p> You may delete an article below</p>
+
+        <br>
+
+            <form method = "POST" autocomplete="off">
+                {% csrf_token %}
+
+               
+
+                <input class="btn btn-danger" type="submit" value="Delete Article"/>
+
+
+            </form>
+            <br>
+            <a href="{% url 'my-articles'%}"> Return to articles </a>
+
+
+    </div>
+
+
+{% endblock %}

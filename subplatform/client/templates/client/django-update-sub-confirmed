@@ -1,0 +1,29 @@
+{% extends 'client/navbar.html' %}
+
+{% block content %}
+
+    <br>
+
+    <div class="container bg-white shadow-md p-5 form-layout text-center">
+        <h5> very final application approval successfully updated </h5>
+
+        <br>
+        <h1> </h1>
+        <br>
+
+        <p>
+            
+            Congratulations on updatiting your subscription on djangoo.You are now eligible with the perks
+
+
+        </p>
+
+        <a class="btn btn-success" type="button" href="{%  url '' %}">
+
+            > Return to Dashboard
+        </a>
+
+
+    </div>
+
+{% endblock %}

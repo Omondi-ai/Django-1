@@ -1,0 +1,23 @@
+{% extends 'client/navbar.html' %}
+
+{% block content %}
+
+<h1>Client dashboard</h1>
+<br>
+
+    <div class="container bg-white shadow-md p-5 form-layout text-center">
+        <h3> Subscription locked, {{user.first_name}} </h3>
+        <p>Please just subscribe to browse or articles</p>
+
+        <hr>
+        <a class="btn btn-success" type="button" href="{%  url 'subscription-plans' %}">
+
+            > View Subscription Plans For You
+        </a>
+
+    </div>
+
+
+
+{% endblock %}
+<a href="{% url 'my-login' %}" > Logout </a>

@@ -1,0 +1,57 @@
+{% extends 'writer/navbar.html ' %}
+
+{% block content %}
+
+    <br>
+    {% for article in AllArticles %}
+        <div class="container bg-white shadow-md p-5 form-layout">
+            <h3> {{article.title}} </h3>
+
+            {{article.content}}
+
+        <br> <br>
+            <hr>
+
+            {{article.date_posted}}
+
+            {% if article.is_premium == True %}
+           
+
+                <strong>Premium</strong>
+
+            {% elif article.is_premium == False %}
+                <strong>Staandard</strong>
+
+            {% endif %}
+            <a href="{% url 'update-article' article.id %}"> Updatee article</a>
+            <br>
+
+            <hr>
+            
+            <a href="{% url 'delete-article' article.id %}"> Delete article</a>
+            
+
+            <hr>
+
+            
+
+        {% endfor %}
+
+        <br> <br>
+        </div>
+
+{% endblock %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,30 @@
+
+{% extends 'writer/navbar.html'%}
+
+{% load crispy_forms_tags %}
+
+{% block content %}
+    <br>
+
+    <div class="container bg-white shadow-md p-5 form-layout">
+
+        <h4> Create an article</h4>
+        <p> You may create an article below</p>
+
+    
+
+            <form method = "POST" autocomplete="off">
+                {% csrf_token %}
+
+                {{ CreateArticleForm|crispy }}
+
+                <input class="btn btn-success" type="submit" value="Create Article"/>
+
+
+            </form>
+
+
+    </div>
+
+
+{% endblock %}

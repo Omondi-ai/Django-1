@@ -1,0 +1,34 @@
+{% extends 'client/navbar.html ' %}
+
+
+{% block content %}
+
+    <br>
+    {% for article in AllClientArticles %}
+        <div class="container bg-white shadow-md p-5 form-layout">
+            <h3> {{article.title}} </h3>
+            <br>
+
+            {{article.content}}
+
+            <br> <br>
+
+            {{article.date_posted}}
+        
+
+            {% if article.is_premium == True %}
+           
+
+                <strong>Premium</strong>
+
+            {% elif article.is_premium == False %}
+                <strong>Standard</strong>
+
+            {% endif %}
+        </div>
+
+    {% endfor %}
+
+        
+
+{% endblock %}

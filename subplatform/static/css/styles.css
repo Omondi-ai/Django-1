@@ -1,0 +1,10 @@
+body{
+
+    background-color:aquamarine;
+    overflow-x: hidden;
+}
+
+.form-layout{
+    width: 500px;
+    border-radius:20px;
+}
